@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicle 14</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+    <style>
+          *
+        {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container
+        {
+            width: 100%;
+            padding: 15px;
+           
+        }
+      
+       .container #formtemplate
+        {
+            text-align: center;
+            color: red;
+            margin-top: 50px;
+            margin-bottom: 15px;
+        }
+        
+        header
+        { 
+            width: 100%;
+            height: 67vh;
+            background-color:snow;
+        }
+        header::after
+        {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        article
+       
+        {
+            
+           width: 20%;
+            height:420px ;
+            float: left;
+            margin-left: 50px;
+            margin-top: 35px;
+        
+            
+        }
+        aside
+        {
+           
+            width: 70%;
+            float: right;
+           
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 35px;
+            
+        
+        }
+        section.sec-1
+
+        {
+           
+           background-color:orange;
+            
+            height: 120px;
+            
+        }
+       section.sec-1  h5
+        {
+            color: white;
+            padding: 15px;
+            text-align:center;
+            font-size: 20px;
+            
+        }
+        section.sec-1 i
+        {
+            color: white;
+           margin-right: 20px;
+           margin-top: 15px;
+        }
+       section.sec-1 .fb
+        {
+          margin-left: 110px;
+        }
+       section.sec-1 .form
+        {
+            margin-top: 80px;
+        }
+        #youremail
+        {
+            border:none;
+            outline: none;
+            border-bottom: 1px solid grey;
+            width: 85%;
+            padding: 10px;
+            margin-left: 20px;
+        }
+        #pass
+        {
+            margin-top: 15px;
+            
+            border:none;
+            outline: none;
+            border-bottom: 1px solid grey;
+            width: 85%;
+            padding: 10px;
+            margin-left: 20px;
+        }
+       section.sec-1  #forget h6
+        {
+            color: gray;
+            margin-left: 180px;
+        }
+        section.sec-1  #forget h6 a
+        {
+            text-decoration: none;
+            color:black;
+        }
+        section.sec-1 #button input
+        {
+            padding: 10px;
+            border:  white;
+            width: 100px;
+            background-color: grey;
+            border-radius:20px ;
+            margin-left: 20px;
+            margin-top: 40px;
+            color: white;
+            display: inline-block;
+        }
+        section.sec-1 #button h6
+        {
+            display: inline-block;
+            
+            color:grey ;
+        }
+        section.sec-1 #button h6 a
+        {
+            display: inline-block;
+            text-decoration: none;
+            color:black;
+        }
+        section.sec-2
+        {
+            
+            width: 30%;
+        }
+        section.sec-2 h1
+        {
+            color: deeppink;
+            margin-top: 10px;
+            text-align: center;
+            margin-bottom: 45px;
+        }
+        section.sec-2 #terms input
+        {
+            margin-left: 25px;
+            display: inline-block;
+            margin-top: 5px;
+        }
+        section.sec-2 #terms h6
+        {
+            display: inline-block;
+            color: gray;
+            margin-left: 10px;
+        }
+        section.sec-2 #terms h6 a
+        {
+            text-decoration: none;
+            color:deepskyblue;
+        }
+        section.sec-2 #button input
+        {
+            padding: 10px;
+            border:  white;
+            width: 150px;
+            background-color:deeppink;
+            border-radius:20px ;
+            margin-left: 20px;
+            margin-top: 40px;
+            color: white;
+            display: inline-block;
+        }
+        section.sec-2 #button h6
+        {
+            display: inline-block;
+            
+            color:grey ;
+            margin-left: 5px;
+        }
+        section.sec-2 #button h6 a
+        {
+            display: inline-block;
+            text-decoration: none;
+            color:deepskyblue;
+        }
+        section.sec-2 footer
+        {
+            background-color: lightsteelblue;
+            margin-top: 30px;
+            height: 80px;
+        }
+        section.sec-2 i
+        {
+          color: white;
+          margin-top: 30px;
+          margin-left: 70px;
+        }
+        section.sec-3
+        {
+         
+            width: 30%;
+        }
+        section.sec-3 h1
+        {
+            
+            margin-top: 10px;
+            text-align: center;
+            margin-bottom: 45px;
+        }
+        section.sec-3 #forget  a
+        {
+            text-decoration: none;
+            color:deepskyblue;
+            margin-left: 150px;
+        }
+        section.sec-3 #button input
+        {
+            padding: 10px;
+            border:  white;
+            width: 280px;
+            background-color:royalblue;
+            border-radius:20px ;
+            margin-left: 20px;
+            margin-top: 40px;
+            color: white;
+            display: inline-block;
+        }
+        section.sec-3 #button h6
+        {
+            margin-top: 15px;
+            color: grey;
+            text-align: center;
+        }
+        section.sec-a
+        {
+            margin-top: 15px;
+            margin-left: 200px;
+          
+        }
+        section.sec-3 i
+        {
+           font-size:15px;
+           color:deepskyblue;
+           background: white;
+             padding:10px;
+             border-radius: 20px;
+             
+               width: 50px;
+               align-items: center;
+               margin-top: 30px;
+               margin-left: 35px;
+               
+               text-align: center;
+            
+        }
+        @media(max-width: 1200px)
+        {
+            .container
+        {
+            width: 100%;
+            padding: 15px;
+           
+        }
+      
+       .container #formtemplate
+        {
+            text-align: center;
+            color: red;
+            margin-top: 50px;
+            margin-bottom: 15px;
+        }
+        
+        header
+        { 
+            width: 100%;
+            height: 67vh;
+            background-color:snow;
+        }
+        header::after
+        {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        article
+       
+        {
+            
+           width: 20%;
+            height:420px ;
+            float: left;
+            margin-left: 50px;
+            margin-top: 35px;
+        
+            
+        }
+        aside
+        {
+           
+            width: 70%;
+            float: right;
+           
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 35px;
+            
+        
+        }
+        section.sec-1
+
+        {
+           
+           background-color:orange;
+            
+            height: 120px;
+            
+        }
+       section.sec-1  h5
+        {
+            color: white;
+            padding: 15px;
+            text-align:center;
+            font-size: 20px;
+            
+        }
+        section.sec-1 i
+        {
+            color: white;
+           margin-right: 20px;
+           margin-top: 15px;
+        }
+       section.sec-1 .fb
+        {
+          margin-left: 110px;
+        }
+       section.sec-1 .form
+        {
+            margin-top: 80px;
+        }
+        #youremail
+        {
+            border:none;
+            outline: none;
+            border-bottom: 1px solid grey;
+            width: 85%;
+            padding: 10px;
+            margin-left: 20px;
+        }
+        #pass
+        {
+            margin-top: 15px;
+            
+            border:none;
+            outline: none;
+            border-bottom: 1px solid grey;
+            width: 85%;
+            padding: 10px;
+            margin-left: 20px;
+        }
+       section.sec-1  #forget h6
+        {
+            color: gray;
+            margin-left: 180px;
+        }
+        section.sec-1  #forget h6 a
+        {
+            text-decoration: none;
+            color:black;
+        }
+        section.sec-1 #button input
+        {
+            padding: 10px;
+            border:  white;
+            width: 100px;
+            background-color: grey;
+            border-radius:20px ;
+            margin-left: 20px;
+            margin-top: 40px;
+            color: white;
+            display: inline-block;
+        }
+        section.sec-1 #button h6
+        {
+            display: inline-block;
+            
+            color:grey ;
+        }
+        section.sec-1 #button h6 a
+        {
+            display: inline-block;
+            text-decoration: none;
+            color:black;
+        }
+        section.sec-2
+        {
+            
+            width: 30%;
+        }
+        section.sec-2 h1
+        {
+            color: deeppink;
+            margin-top: 10px;
+            text-align: center;
+            margin-bottom: 45px;
+        }
+        section.sec-2 #terms input
+        {
+            margin-left: 25px;
+            display: inline-block;
+            margin-top: 5px;
+        }
+        section.sec-2 #terms h6
+        {
+            display: inline-block;
+            color: gray;
+            margin-left: 10px;
+        }
+        section.sec-2 #terms h6 a
+        {
+            text-decoration: none;
+            color:deepskyblue;
+        }
+        section.sec-2 #button input
+        {
+            padding: 10px;
+            border:  white;
+            width: 150px;
+            background-color:deeppink;
+            border-radius:20px ;
+            margin-left: 20px;
+            margin-top: 40px;
+            color: white;
+            display: inline-block;
+        }
+        section.sec-2 #button h6
+        {
+            display: inline-block;
+            
+            color:grey ;
+            margin-left: 5px;
+        }
+        section.sec-2 #button h6 a
+        {
+            display: inline-block;
+            text-decoration: none;
+            color:deepskyblue;
+        }
+        section.sec-2 footer
+        {
+            background-color: lightsteelblue;
+            margin-top: 30px;
+            height: 80px;
+        }
+        section.sec-2 i
+        {
+          color: white;
+          margin-top: 30px;
+          margin-left: 70px;
+        }
+        section.sec-3
+        {
+         
+            width: 30%;
+        }
+        section.sec-3 h1
+        {
+            
+            margin-top: 10px;
+            text-align: center;
+            margin-bottom: 45px;
+        }
+        section.sec-3 #forget  a
+        {
+            text-decoration: none;
+            color:deepskyblue;
+            margin-left: 150px;
+        }
+        section.sec-3 #button input
+        {
+            padding: 10px;
+            border:  white;
+            width: 280px;
+            background-color:royalblue;
+            border-radius:20px ;
+            margin-left: 20px;
+            margin-top: 40px;
+            color: white;
+            display: inline-block;
+        }
+        section.sec-3 #button h6
+        {
+            margin-top: 15px;
+            color: grey;
+            text-align: center;
+        }
+        section.sec-a
+        {
+            margin-top: 15px;
+            margin-left: 200px;
+          
+        }
+        section.sec-3 i
+        {
+           font-size:15px;
+           color:deepskyblue;
+           background: white;
+             padding:10px;
+             border-radius: 20px;
+             
+               width: 50px;
+               align-items: center;
+               margin-top: 30px;
+               margin-left: 35px;
+               
+               text-align: center;
+            
+        } 
+        }
+        @media(min-width: 400px) and (max-width: 1200px)
+        {
+            
+            .container
+        {
+            width: 100%;
+            padding: 15px;
+           
+        }
+      
+       .container #formtemplate
+        {
+            text-align: center;
+            color: red;
+            margin-top: 50px;
+            margin-bottom: 15px;
+        }
+        
+        header
+        { 
+            width: 100%;
+            height: 67vh;
+            background-color:snow;
+        }
+        header::after
+        {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        article
+       
+        {
+            
+           width: 20%;
+            height:420px ;
+            /* float: left; */
+            margin-left: 50px;
+            margin-top: 35px;
+        
+            
+        }
+        aside
+        {
+           
+            width: 70%;
+            float: right;
+           
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 35px;
+            
+        
+        }
+        section.sec-1
+
+        {
+           
+           background-color:orange;
+            
+            height: 120px;
+            
+        }
+       section.sec-1  h5
+        {
+            color: white;
+            padding: 15px;
+            text-align:center;
+            font-size: 20px;
+            
+        }
+        section.sec-1 i
+        {
+            color: white;
+           margin-right: 20px;
+           margin-top: 15px;
+        }
+       section.sec-1 .fb
+        {
+          margin-left: 110px;
+        }
+       section.sec-1 .form
+        {
+            margin-top: 80px;
+        }
+        #youremail
+        {
+            border:none;
+            outline: none;
+            border-bottom: 1px solid grey;
+            width: 85%;
+            padding: 10px;
+            margin-left: 20px;
+        }
+        #pass
+        {
+            margin-top: 15px;
+            
+            border:none;
+            outline: none;
+            border-bottom: 1px solid grey;
+            width: 85%;
+            padding: 10px;
+            margin-left: 20px;
+        }
+       section.sec-1  #forget h6
+        {
+            color: gray;
+            margin-left: 180px;
+        }
+        section.sec-1  #forget h6 a
+        {
+            text-decoration: none;
+            color:black;
+        }
+        section.sec-1 #button input
+        {
+            padding: 10px;
+            border:  white;
+            width: 100px;
+            background-color: grey;
+            border-radius:20px ;
+            margin-left: 20px;
+            margin-top: 40px;
+            color: white;
+            display: inline-block;
+        }
+        section.sec-1 #button h6
+        {
+            display: inline-block;
+            
+            color:grey ;
+        }
+        section.sec-1 #button h6 a
+        {
+            display: inline-block;
+            text-decoration: none;
+            color:black;
+        }
+        section.sec-2
+        {
+            
+            width: 30%;
+        }
+        section.sec-2 h1
+        {
+            color: deeppink;
+            margin-top: 10px;
+            text-align: center;
+            margin-bottom: 45px;
+        }
+        section.sec-2 #terms input
+        {
+            margin-left: 25px;
+            display: inline-block;
+            margin-top: 5px;
+        }
+        section.sec-2 #terms h6
+        {
+            display: inline-block;
+            color: gray;
+            margin-left: 10px;
+        }
+        section.sec-2 #terms h6 a
+        {
+            text-decoration: none;
+            color:deepskyblue;
+        }
+        section.sec-2 #button input
+        {
+            padding: 10px;
+            border:  white;
+            width: 150px;
+            background-color:deeppink;
+            border-radius:20px ;
+            margin-left: 20px;
+            margin-top: 40px;
+            color: white;
+            display: inline-block;
+        }
+        section.sec-2 #button h6
+        {
+            display: inline-block;
+            
+            color:grey ;
+            margin-left: 5px;
+        }
+        section.sec-2 #button h6 a
+        {
+            display: inline-block;
+            text-decoration: none;
+            color:deepskyblue;
+        }
+        section.sec-2 footer
+        {
+            background-color: lightsteelblue;
+            margin-top: 30px;
+            height: 80px;
+        }
+        section.sec-2 i
+        {
+          color: white;
+          margin-top: 30px;
+          margin-left: 70px;
+        }
+        section.sec-3
+        {
+         
+            width: 30%;
+        }
+        section.sec-3 h1
+        {
+            
+            margin-top: 10px;
+            text-align: center;
+            margin-bottom: 45px;
+        }
+        section.sec-3 #forget  a
+        {
+            text-decoration: none;
+            color:deepskyblue;
+            margin-left: 150px;
+        }
+        section.sec-3 #button input
+        {
+            padding: 10px;
+            border:  white;
+            width: 280px;
+            background-color:royalblue;
+            border-radius:20px ;
+            margin-left: 20px;
+            margin-top: 40px;
+            color: white;
+            display: inline-block;
+        }
+        section.sec-3 #button h6
+        {
+            margin-top: 15px;
+            color: grey;
+            text-align: center;
+        }
+        section.sec-a
+        {
+            margin-top: 15px;
+            margin-left: 200px;
+          
+        }
+        section.sec-3 i
+        {
+           font-size:15px;
+           color:deepskyblue;
+           background: white;
+             padding:10px;
+             border-radius: 20px;
+             
+               width: 50px;
+               align-items: center;
+               margin-top: 30px;
+               margin-left: 35px;
+               
+               text-align: center;
+            
+        } 
+        }
+      
+
+    </style>
+</head>
+<body>
+    <div class="container">
+       <h1 id="formtemplate">FORM TEMPLATE</h1>
+       <header>
+           
+               <article>
+                <section class="sec-1">  
+                   <h5>Log in</h5>
+                   <i class="fa fa-facebook fb" aria-hidden="true"></i>
+                   <i class="fa fa-twitter twit" aria-hidden="true"></i>
+                   <i class="fa fa-google goo" aria-hidden="true"></i>
+                   <form class="form" action="data.html" method="GET">
+                       <div>
+                    
+                           <input type="email"  id="youremail" name="fname" placeholder="Your email" required >
+                    
+                             <br/><br/>
+                        </div>
+               
+                        <div>
+                    
+                             <input type="password" id="pass" name="pwd" placeholder="Your Password">
+                              <br/><br/>
+                       </div>
+                        <div id="forget">
+                            <h6>Forget <a href="">Password?</a></h6>
+                      
+                         </div>
+                         <div id="button">
+                             <input   type="button" value="LOG IN"     > 
+                             <h6>Dont't have an account?<a href="">Sign up</a></h6>
+                             
+                         </div>
+                         
+                 </form>
+
+              
+           
+                </section>
+            </article>  
+            <aside>
+                <section class="sec-2">
+                    <h1>Sign  up</h1>
+                    <form class="form" action="data.html" method="GET">
+                        <div>
+                     
+                            <input type="email"  id="youremail" name="fname" placeholder="Your email" required >
+                     
+                              <br/><br/>
+                         </div>
+                
+                         <div>
+                     
+                              <input type="password" id="pass" name="pwd" placeholder="Your Password">
+                               <br/><br/>
+                        </div>
+                        <div id="terms">
+                            <input type="checkbox" name="" id="">
+                            <h6>Accept the <a href="">Terms and Conditions</a></h6>
+                        </div>
+                        <div id="button">
+                            <input   type="button" value="SIGN UP"     > 
+                            <h6> have an account?<a href="">Log in</a></h6>
+                            
+                        </div>
+                        
+                          
+                  </form>
+                   <footer>
+                    <i class="fa fa-facebook fb" aria-hidden="true"></i>
+                    <i class="fa fa-twitter twit" aria-hidden="true"></i>
+                    <i class="fa fa-google goo" aria-hidden="true"></i>
+                   </footer>
+                 </section>
+                 <section class="sec-3">
+                     <h1>Sign in</h1>
+                        <form class="form" action="data.html" method="GET">
+                       <div>
+                    
+                           <input type="email"  id="youremail" name="fname" placeholder="Your email" required >
+                    
+                             <br/><br/>
+                        </div>
+               
+                        <div>
+                    
+                             <input type="password" id="pass" name="pwd" placeholder="Your Password">
+                              <br/><br/>
+                       </div>
+                        <div id="forget">
+                         <a href=""> Forget Password?</a>
+                      
+                         </div>
+                         <div id="button">
+                             <input   type="button" value="SIGH IN"     > 
+                             <h6>or sign in with:</h6>
+                             
+                         </div>
+                         
+                 </form>
+                  <footer>
+                    <i class="fa fa-facebook fb" aria-hidden="true"></i>
+                    <i class="fa fa-twitter twit" aria-hidden="true"></i>
+                    <i class="fa fa-google goo" aria-hidden="true"></i>
+                  </footer>
+                 </section>
+            </aside>
+           
+        
+          
+       </header>
+   </div>
+</body>
+</html>
